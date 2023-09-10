@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44C753E2AACE35700BC341D /* PlayWithAlphaNumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C753D2AACE35700BC341D /* PlayWithAlphaNumVC.swift */; };
 		A4CBB4832AAC3ACC0070DAFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBB4822AAC3ACC0070DAFA /* AppDelegate.swift */; };
 		A4CBB4852AAC3ACC0070DAFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBB4842AAC3ACC0070DAFA /* SceneDelegate.swift */; };
 		A4CBB4872AAC3ACC0070DAFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBB4862AAC3ACC0070DAFA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A44C753D2AACE35700BC341D /* PlayWithAlphaNumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithAlphaNumVC.swift; sourceTree = "<group>"; };
 		A4CBB47F2AAC3ACC0070DAFA /* PlayWithAlphaNumericsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithAlphaNumericsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CBB4822AAC3ACC0070DAFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CBB4842AAC3ACC0070DAFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A4CBB48B2AAC3ACC0070DAFA /* Assets.xcassets */,
 				A4CBB48D2AAC3ACC0070DAFA /* LaunchScreen.storyboard */,
 				A4CBB4902AAC3ACC0070DAFA /* Info.plist */,
+				A44C753D2AACE35700BC341D /* PlayWithAlphaNumVC.swift */,
 			);
 			path = PlayWithAlphaNumericsApp;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44C753E2AACE35700BC341D /* PlayWithAlphaNumVC.swift in Sources */,
 				A4CBB4872AAC3ACC0070DAFA /* ViewController.swift in Sources */,
 				A4CBB4832AAC3ACC0070DAFA /* AppDelegate.swift in Sources */,
 				A4CBB4852AAC3ACC0070DAFA /* SceneDelegate.swift in Sources */,
