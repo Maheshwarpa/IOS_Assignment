@@ -128,14 +128,16 @@ class PlayWithAlphaNumVC: UIViewController {
     }
     
     @IBAction func manipulateStrings(_ sender: UIButton) {
-        var str1="nithinreddy"//firstStrTF.text ?? " "
+        var str1="Nithinreddy"//firstStrTF.text ?? " "
         var str2="vemula" //secondStrTF.text ?? " "
         //var temp=String(str1 + str2)
        // MessageTV.text="Concatenation of the Strings,\(temp)"
         var temp = str1 + str2
+        var temp1 = temp
+        temp1=temp1.lowercased()
         MessageTV.text="Concatenation of two strings result is \"\(temp)\"\n"
         var cnt=0,vs=0
-        for char in temp{
+        for char in temp1{
             switch char{
             case "a","e","i","o","u":
                 cnt+=1
@@ -147,16 +149,18 @@ class PlayWithAlphaNumVC: UIViewController {
         MessageTV.text+="Consonent count in the String is \(vs)\n"
         var uc=0,lm=0,wc=temp.count,lk=0,ind=1
         ind = -(ind)
-        var str4=temp
+        //temp=temp.lowercased()
+        var str4=temp1
         
-        for char in temp{
+        
+        for char in temp1{
             for ch in str4{
                 ind=ind+1
-                print("String4 is :\(str4)")
+                //print("String4 is :\(str4)")
                 if(ch == char){
                     
                     uc+=1
-                    print(uc)
+                    //print(uc)
                     print("***\(ch)")
                     if(uc>1){
                         //Character cha=ch
@@ -178,7 +182,8 @@ class PlayWithAlphaNumVC: UIViewController {
         }
         print("The str4 is :\(str4)")
         MessageTV.text+="The number of Unique Characters in \"\(temp) is : \(str4.count)\n"
-        MessageTV.text+="The Reverse of the given string is :\(temp.reversed())"
+        var revStr=String(temp.reversed())
+        MessageTV.text+="The Reverse of the given string is :\(revStr)"
         
         
         
