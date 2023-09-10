@@ -46,7 +46,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zn2-zX-Lex" userLabel="NumbersSV">
                                                         <rect key="frame" x="0.0" y="0.0" width="131.66666666666666" height="31"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-9o-U1L">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-9o-U1L">
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                 <connections>
                                                                     <action selector="numberSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="n8R-iH-CFR"/>
@@ -63,7 +63,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r6q-Sp-QSL" userLabel="StringsSV">
                                                         <rect key="frame" x="139.66666666666669" y="0.0" width="116.33333333333331" height="31"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-mE-zdL">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-mE-zdL">
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                 <connections>
                                                                     <action selector="stringSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="OO5-iN-hNX"/>
