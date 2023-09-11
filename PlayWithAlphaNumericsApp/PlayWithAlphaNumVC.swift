@@ -150,61 +150,70 @@ class PlayWithAlphaNumVC: UIViewController {
         var str2=secondStrTF.text ?? " "
         //var temp=String(str1 + str2)
        // MessageTV.text="Concatenation of the Strings,\(temp)"
-        var temp = str1 + str2
-        var temp1 = temp
-        temp1=temp1.lowercased()
-        MessageTV.text="Concatenation of two strings result is \"\(temp)\"\n"
-        var cnt=0,vs=0
-        for char in temp1{
-            switch char{
-            case "a","e","i","o","u":
-                cnt+=1
-            default:
-                vs+=1
-            }
+        
+        if(str1.isEmpty){
+            MessageTV.text="First String is Invalid.Please provide atleast one character"
         }
-        MessageTV.text+="Vowel count in the String is \(cnt)\n"
-        MessageTV.text+="Consonent count in the String is \(vs)\n"
-        var uc=0,lm=0,ind=1
-        ind = -(ind)
-        //temp=temp.lowercased()
-        var str4=temp1
-        
-        
-        for char in temp1{
-            for ch in str4{
-                ind=ind+1
-                //print("String4 is :\(str4)")
-                if(ch == char){
-                    
-                    uc+=1
-                    //print(uc)
-                    print("***\(ch)")
-                    if(uc>1){
-                        //Character cha=ch
-                        
-                        //str4.replacingOccurrences(of: cha, with: "")
-                        print(ch)
-
-                        str4.remove(at: str4.index(str4.startIndex, offsetBy: ind-1))
-                        uc=uc-1
-                    }
+        else if(str2.isEmpty){
+            MessageTV.text="Second String is Invalid.Please provide atleast one character"
+        }
+        else{
+            
+            var temp = str1 + str2
+            var temp1 = temp
+            temp1=temp1.lowercased()
+            MessageTV.text="Concatenation of two strings result is \"\(temp)\"\n"
+            var cnt=0,vs=0
+            for char in temp1{
+                switch char{
+                case "a","e","i","o","u":
+                    cnt+=1
+                default:
+                    vs+=1
                 }
             }
-            if(uc==1){
-                lm+=1
-            }
+            MessageTV.text+="Vowel count in the String is \(cnt)\n"
+            MessageTV.text+="Consonent count in the String is \(vs)\n"
+            var uc=0,lm=0,ind=1
+            ind = -(ind)
+            //temp=temp.lowercased()
+            var str4=temp1
             
-            uc=0
-            ind=0
+            
+            for char in temp1{
+                for ch in str4{
+                    ind=ind+1
+                    //print("String4 is :\(str4)")
+                    if(ch == char){
+                        
+                        uc+=1
+                        //print(uc)
+                        print("***\(ch)")
+                        if(uc>1){
+                            //Character cha=ch
+                            
+                            //str4.replacingOccurrences(of: cha, with: "")
+                            print(ch)
+                            
+                            str4.remove(at: str4.index(str4.startIndex, offsetBy: ind-1))
+                            uc=uc-1
+                        }
+                    }
+                }
+                if(uc==1){
+                    lm+=1
+                }
+                
+                uc=0
+                ind=0
+                
+            }
+            print("The str4 is :\(str4)")
+            MessageTV.text+="The number of Unique Characters in \"\(temp) is : \(str4.count)\n"
+            var revStr=String(temp.reversed())
+            MessageTV.text+="The Reverse of the given string is :\(revStr)"
             
         }
-        print("The str4 is :\(str4)")
-        MessageTV.text+="The number of Unique Characters in \"\(temp) is : \(str4.count)\n"
-        var revStr=String(temp.reversed())
-        MessageTV.text+="The Reverse of the given string is :\(revStr)"
-        
-        
         
     }
     
