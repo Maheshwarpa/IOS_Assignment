@@ -13,8 +13,11 @@ class PlayWithAlphaNumVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.HeadLBL.text=String(format: "%@\nPlay with AlphaNumerics™", "\u{0c38}\u{0c4d}\u{0c35}\u{0c3e}\u{0c17}\u{0c24}\u{0c02}")
     }
     
+    @IBOutlet weak var secondStepper: UIStepper!
+    @IBOutlet weak var firstStepper: UIStepper!
     @IBOutlet weak var GenButton: UIButton!
     
     @IBOutlet weak var ManiButton: UIButton!
@@ -39,8 +42,9 @@ class PlayWithAlphaNumVC: UIViewController {
     
     @IBOutlet weak var MessageTV: UITextView!
     
-    
     @IBOutlet weak var firstStrTF: UITextField!
+    
+
     
     @IBOutlet weak var secondStrTF: UITextField!
     
@@ -48,9 +52,12 @@ class PlayWithAlphaNumVC: UIViewController {
     @IBAction func stringSWCH(_ sender: UISwitch) {
         if StrBtn.isEnabled{
             ManiButton.isEnabled=sender.isOn
+            firstStrTF.isEnabled=sender.isOn
+            secondStrTF.isEnabled=sender.isOn
         }
         else{
             ManiButton.isOpaque=sender.isOpaque
+           
         }
         }
     
@@ -61,14 +68,25 @@ class PlayWithAlphaNumVC: UIViewController {
         secondLBL.text="0"
         firstStrTF.text=""
         secondStrTF.text=""
+        NumBtn.isOn=false
+        StrBtn.isOn=false
+        ManiButton.isEnabled=false
+        GenButton.isEnabled=false
+        firstStepper.isEnabled=false
+        secondStepper.isEnabled=false
         
     }
     @IBAction func numberSWCH(_ sender: UISwitch) {
         if NumBtn.isEnabled{
             GenButton.isEnabled=sender.isOn
+            firstStepper.isEnabled=sender.isOn
+            secondStepper.isEnabled=sender.isOn
         }
         else{
             GenButton.isOpaque=sender.isOpaque
+            firstStepper.isOpaque=sender.isOpaque
+            secondStepper.isEnabled=false
+            //secondLBL.isEnabled=false
         }
     }
     
@@ -128,8 +146,8 @@ class PlayWithAlphaNumVC: UIViewController {
     }
     
     @IBAction func manipulateStrings(_ sender: UIButton) {
-        var str1="Nithinreddy"//firstStrTF.text ?? " "
-        var str2="vemula" //secondStrTF.text ?? " "
+        var str1=firstStrTF.text ?? " "
+        var str2=secondStrTF.text ?? " "
         //var temp=String(str1 + str2)
        // MessageTV.text="Concatenation of the Strings,\(temp)"
         var temp = str1 + str2
@@ -147,7 +165,7 @@ class PlayWithAlphaNumVC: UIViewController {
         }
         MessageTV.text+="Vowel count in the String is \(cnt)\n"
         MessageTV.text+="Consonent count in the String is \(vs)\n"
-        var uc=0,lm=0,wc=temp.count,lk=0,ind=1
+        var uc=0,lm=0,ind=1
         ind = -(ind)
         //temp=temp.lowercased()
         var str4=temp1
@@ -167,6 +185,7 @@ class PlayWithAlphaNumVC: UIViewController {
                         
                         //str4.replacingOccurrences(of: cha, with: "")
                         print(ch)
+
                         str4.remove(at: str4.index(str4.startIndex, offsetBy: ind-1))
                         uc=uc-1
                     }
