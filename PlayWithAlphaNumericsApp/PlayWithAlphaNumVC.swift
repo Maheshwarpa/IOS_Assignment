@@ -14,6 +14,9 @@ class PlayWithAlphaNumVC: UIViewController {
 
         // Do any additional setup after loading the view.
         self.HeadLBL.text=String(format: "%@\nPlay with AlphaNumerics™", "\u{0c38}\u{0c4d}\u{0c35}\u{0c3e}\u{0c17}\u{0c24}\u{0c02}")
+        
+        self.firstStrTF.isEnabled=false
+        self.secondStrTF.isEnabled=false
     }
     
     @IBOutlet weak var secondStepper: UIStepper!
@@ -49,6 +52,7 @@ class PlayWithAlphaNumVC: UIViewController {
     @IBOutlet weak var secondStrTF: UITextField!
     
     
+    
     @IBAction func stringSWCH(_ sender: UISwitch) {
         if StrBtn.isEnabled{
             ManiButton.isEnabled=sender.isOn
@@ -74,6 +78,8 @@ class PlayWithAlphaNumVC: UIViewController {
         GenButton.isEnabled=false
         firstStepper.isEnabled=false
         secondStepper.isEnabled=false
+        firstStepper.value=0
+        secondStepper.value=0
         
     }
     @IBAction func numberSWCH(_ sender: UISwitch) {
@@ -106,7 +112,7 @@ class PlayWithAlphaNumVC: UIViewController {
         MessageTV.text=""
         
         if(row==0 && col==0){
-            MessageTV.text="First Number and Second Number are Invalid. Please provide a value greater than zero"
+            MessageTV.text="First Number is Invalid. Please provide a value greater than zero"
         }
         else if(row==0 && col>0){
             MessageTV.text="First Number is Invalid. Please provide a value greater than zero"
