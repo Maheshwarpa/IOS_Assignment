@@ -80,6 +80,8 @@ class PlayWithAlphaNumVC: UIViewController {
         secondStepper.isEnabled=false
         firstStepper.value=0
         secondStepper.value=0
+        firstStrTF.isEnabled=false
+        secondStrTF.isEnabled=false
         
     }
     @IBAction func numberSWCH(_ sender: UISwitch) {
